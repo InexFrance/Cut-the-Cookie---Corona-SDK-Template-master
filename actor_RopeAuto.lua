@@ -329,7 +329,7 @@ function newRopeAuto(params)
 		
 		end
 	
-        	if ( myGlobalData.levelFailed == false and myGlobalData.sweetSmashed==false) then
+        	if ( myGlobalData.levelFailed == false and myGlobalData.sweetSmashed==false and sweetBody.x ~= nil and sweetBody.y ~= nil) then --and Cookie ~= nil
 
 				local c1 = display.newCircle(nubBodyArea.x, nubBodyArea.y,10);
 				c1:setFillColor(1,0,0); c1.alpha=0.0

@@ -101,7 +101,7 @@ function newCookie(x, y, vx, vy)
 		---------------------------------------------------------------------------------------------------------
 		myGlobalData.cookieSmashed = true
 		
-		if ( myGlobalData.levelFailed == false ) then
+		if ( myGlobalData.levelFailed == false ) and (Cookie ~= nil) then
 
 			local cookieBody = event.source.cookieBody
 			local i
@@ -185,11 +185,13 @@ function newCookie(x, y, vx, vy)
 				---------------------------------------------------------------------------------------------------------
 				--Play unhappy sound fx!
 				---------------------------------------------------------------------------------------------------------
+				
 				audio.play(sfx_Poor)
 				
 				myGlobalData.heroIsSad = true
 				local delayAction = timer.performWithDelay( 20, chopCookieUp )
 				delayAction.cookieBody = event.target
+				
 			end
         
 			if (event.other.objectType == "HeroMouth" ) then
